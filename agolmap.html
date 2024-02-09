@@ -117,9 +117,15 @@ const TextSymbol = {
           "height": "20px"
         }
     }
+  const popupRestauraunts = {
+    "title": "Restaurant",
+    "content":{name}
+  }
   const restaurants = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/restaurants/FeatureServer",
-    renderer: restaurantsRenderer
+    renderer: restaurantsRenderer,
+    outFields:["name"],
+    popupTemplate: popupRestaurants
   });
 
   map.add(restaurants, 0);
