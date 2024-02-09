@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS Maps SDK for JavaScript Tutorials: Add a point, line, and polygon</title>
+  <title>Tops Cities with the Most Single People</title>
   <style>
     html, body, #viewDiv {
       padding: 0;
@@ -59,7 +59,13 @@
 const TextSymbol = {
   type: "text",
   color: "white",
-  text: i, 
+  text: i+1, 
+  yoffset: -3, 
+  font: { 
+    family: "Arial",
+    size: 12,
+    weight: "bold"
+  }
 }
  const pointGraphic = new Graphic({
     geometry: point, 
