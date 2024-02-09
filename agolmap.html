@@ -107,6 +107,11 @@ const TextSymbol = {
   graphicsLayer.add(pointGraphic2);
   
  }
+  const squares = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/circles/FeatureServer"
+  });
+
+  map.add(squares);
  });
 </script>
 </head>
