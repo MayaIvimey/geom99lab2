@@ -46,21 +46,15 @@
     longitude: -79.347015,
     latitude: 43.651070
  };
- const simpleMarkerSymbol = {
-    type: "text",
+ const PictureMarkerSymbol = {
+    type: "picture-marker",
     text: "Toronto",
-    color: "white",
-    backgroundColor: "red", 
-    font: {  // autocasts as new Font()
-    size: 12,
-    family: "Josefin Slab",
-    weight: "bold"
-  }
+    url: "heart.png",
  };
 
  const pointGraphic = new Graphic({
     geometry: point, 
-    symbol: simpleMarkerSymbol
+    symbol: PictureMarkerSymbol
  });
  graphicsLayer.add(pointGraphic);
 
