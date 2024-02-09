@@ -42,7 +42,7 @@
  map.add(graphicsLayer);
     var latitude = [43.651070, 45.508888, 49.246292]
     var longitude = [-79.347015, -73.561668, -123.116226]
-
+    
  for (i=0; i< longitude.length; i++ ){
             // Create a point
             var point = {
@@ -56,12 +56,21 @@
     width: "64px",
     height: "64px"
  };
-
+const TextSymbol = {
+  type: "text",
+  color: "white",
+  text: i, 
+}
  const pointGraphic = new Graphic({
     geometry: point, 
     symbol: PictureMarkerSymbol
  });
- graphicsLayer.add(pointGraphic);
+  const pointGraphic2 = new Graphic({
+    geometry: point, 
+    symbol: TextSymbol
+ });
+  graphicsLayer.add(pointGraphic);
+  graphicsLayer.add(pointGraphic2);
  }
  });
 </script>
