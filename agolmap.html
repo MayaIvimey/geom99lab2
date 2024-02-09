@@ -28,7 +28,7 @@
   esriConfig.apiKey = "AAPK147b451956624840ba6531f437239497D-R-iR5780j_D_8puaGiYjkAh0FnsyRU6g3NBO-SFWrBri1v48OqC38VYZL4OIHJ";
 
   const map = new Map({
-    basemap: "arcgis/topographic" // basemap styles service
+    basemap: "arcgis/light-gray" // basemap styles service
   });
 
   const view = new MapView({
@@ -37,7 +37,11 @@
     zoom: 3,
     container: "viewDiv"
  });
+const squares = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/circles/FeatureServer"
+  });
 
+  map.add(squares, 0);
  const graphicsLayer = new GraphicsLayer();
  map.add(graphicsLayer);
     var latitude = [43.651070, 45.508888, 49.246292]
@@ -60,7 +64,7 @@ const TextSymbol = {
   type: "text",
   color: "white",
   text: i+1, 
-  yoffset: -10, 
+  yoffset: -8, 
   font: { 
     family: "Arial",
     size: 12,
