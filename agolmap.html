@@ -86,18 +86,16 @@ const TextSymbol = {
 }
   const popupTemplate = {
     title: "{Name}",
-    men: "men {men}",
-    women: "women {women}"
+    content: "{Description}" 
  }
  const attributes = {
     Name: names[i],
-    men: men[i],
-    women: women[i]
+    Description: "Single Men: " + men[i]+ " " +"Single Women: " + women[i] 
  }
  const pointGraphic = new Graphic({
     geometry: point, 
     symbol: PictureMarkerSymbol,
-     attributes: attributes,
+    attributes: attributes,
     popupTemplate: popupTemplate
  });
   const pointGraphic2 = new Graphic({
