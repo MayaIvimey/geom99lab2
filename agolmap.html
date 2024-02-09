@@ -13,8 +13,7 @@
     }
     h1, p {
       font-family: Arial, Helvetica, sans-serif;
-      color: "white";
-      background-color: "light blue";
+      color: "blue";
       margin: 60px;
     }
     h1 {
@@ -57,6 +56,8 @@
     var latitude = [43.651070, 45.508888, 49.246292]
     var longitude = [-79.347015, -73.561668, -123.116226]
     var names = ["Toronto", "Montreal", "Vancouver"]
+    var men = ["683,305", "486,875", "287,355"]
+    var women = ["705,980", "463,445", "284,280"] 
     
  for (i=0; i< longitude.length; i++ ){
             // Create a point
@@ -84,9 +85,13 @@ const TextSymbol = {
 }
   const popupTemplate = {
     title: "{Name}",
+    men: "men {men}",
+    women: "women {women}"
  }
  const attributes = {
     Name: names[i],
+    men: men[i],
+    women: women[i]
  }
  const pointGraphic = new Graphic({
     geometry: point, 
