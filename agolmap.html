@@ -9,10 +9,10 @@
       margin: 0;
       width: 100%;
     }
-    h1, p{
+    h1, p {
       font-family: Arial, Helvetica, sans-serif;
       color: "white";
-      bakcground-color: "blue";
+      background-color: "light blue";
       margin: 60px;
     }
     h1 {
@@ -40,7 +40,7 @@
   esriConfig.apiKey = "AAPK147b451956624840ba6531f437239497D-R-iR5780j_D_8puaGiYjkAh0FnsyRU6g3NBO-SFWrBri1v48OqC38VYZL4OIHJ";
 
   const map = new Map({
-    basemap: "arcgis/imagery" // basemap styles service
+    basemap: "arcgis/street" // basemap styles service
   });
 
   const view = new MapView({
@@ -106,7 +106,7 @@ const TextSymbol = {
 </head>
 <body>
   <h1>Top Three Cities In Canada With the Most Single People</h1>
-  <p>Hint...it's not Lindsay</p>
+  <p>Hint...Lindsay is not on the list</p>
   <div id="viewDiv"></div>
 </body>
 </html>
